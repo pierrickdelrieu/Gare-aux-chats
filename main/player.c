@@ -1,5 +1,5 @@
 //
-//  main.c
+//  player.c
 //  zombies
 //
 //  Created by Pierrick Delrieu on 18/03/2020.
@@ -7,9 +7,7 @@
 //
 
 #include <stdio.h>
+#include <stdlib.h>
+#include "fonction.h"
 
-int main(int argc, const char * argv[]) {
-    // insert code here...
-    printf("Hello, World!\n");
-    return 0;
-}
+
