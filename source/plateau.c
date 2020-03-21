@@ -50,7 +50,38 @@ void affichage_plateau(int **plateau)
     }
 }
 
+
+void desalocation_plateau(int **plateau)
+{
+    int i;
+    for(i=0; i<HEIGHT; i++)
+    {
+        free(plateau[i]);
+    }
+    
+    free(plateau);
+}
+
 void supr_console()
 {
     printf("\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n");
+}
+
+int condition_arret_partie(int **monde)
+{
+    int i,j;
+    int retour = 0; //0 si arret de partie et 1 sinon
+    
+    for(i=0; i<HEIGHT; i++)
+    {
+        for(j=0; j<WIDHT; j++)
+        {
+            if((monde[i][j] == JOUEUR1) || (monde[i][j] == JOUEUR2) || (monde[i][j] == JOUEUR3) || (monde[i][j] == JOUEUR4) || (monde[i][j] == JOUEUR5))
+            {
+                retour = 1;
+            }
+        }
+    }
+    
+    return (retour);
 }

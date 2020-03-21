@@ -67,7 +67,7 @@ int case_valide_zombie(int i, int j, int **plateau)
 
 void deplacement_zombies(int ***plateau)
 {
-    //1-droite; 2-gauche; 3-haut; 4-bas; 0-bouge pas
+    //1-droite; 2-gauche; 3-haut; 4-bas; 5-bouge pas
     
     int i,j;
     int position = 0;
@@ -79,59 +79,59 @@ void deplacement_zombies(int ***plateau)
             if(i == 0)
             {
                 do{
-                    position = 1 + (rand() % 5);
+                    position = 1 + (rand() % 4);
                 }while(position == 2);
             }
             if(i == HEIGHT-1)
             {
                 do{
-                    position = 1 + (rand() % 5);
+                    position = 1 + (rand() % 4);
                 }while(position == 3);
             }
             if(j == 0)
             {
                 do{
-                    position = 1 + (rand() % 5);
+                    position = 1 + (rand() % 4);
                 }while(position == 1);
             }
             if(j == WIDHT-1)
             {
                 do{
-                    position = 1 + (rand() % 5);
+                    position = 1 + (rand() % 4);
                 }while(position == 4);
             }
             if((i == 0) && (j == 0))
             {
                 while((position == 2) || (position == 3))
                 {
-                    position = 1 + (rand() % 5);
+                    position = 1 + (rand() % 4);
                 }
             }
             if((i == 0) && (j == WIDHT-1))
             {
                 while((position == 1) || (position == 3))
                 {
-                    position = 1 + (rand() % 5);
+                    position = 1 + (rand() % 4);
                 }
             }
             if((i == HEIGHT-1) && (j == 0))
             {
                 while((position == 2) || (position == 4))
                 {
-                    position = 1 + (rand() % 5);
+                    position = 1 + (rand() % 4);
                 }
             }
             if((i == HEIGHT-1) && (j == WIDHT-1))
             {
                 while((position == 1) || (position == 4))
                 {
-                    position = 1 + (rand() % 5);
+                    position = 1 + (rand() % 4);
                 }
             }
             
             if((i != 0) && (i != HEIGHT-1) && (j != 0) && (j != WIDHT-1))
             {
-                position = 1 + (rand() % 5);
+                position = 1 + (rand() % 4);
             }
             
             

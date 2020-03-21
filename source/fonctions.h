@@ -10,9 +10,12 @@
 #define fonctions_h
 
 //PLAYER
+void position_initial_joueur(int ***monde, int position_joueur1[2], int position_joueur2[2],int position_joueur3[2],int position_joueur4[2],int position_joueur5[2]);
 int joueur1(int **monde);
-
-
+int joueur2(int **monde);
+int joueur3(int **monde);
+int joueur4(int **monde);
+int joueur5(int **monde);
 
 
 
@@ -20,7 +23,7 @@ int joueur1(int **monde);
 #include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
-#include <unistd.h>
+#include <unistd.h> //pour le sleep
 
 //Plateau
 #define HEIGHT 15 //hauteur (ligne)
@@ -31,6 +34,10 @@ int joueur1(int **monde);
 int ** creation_plateau_vide(int hauteur, int largeur);
 void affichage_plateau(int **plateau);
 void supr_console(void);
+void desalocation_plateau(int **plateau);
+int condition_arret_partie(int **monde);
+
+
 
 
 //Zombies
@@ -42,7 +49,7 @@ void reabilitation_valeur_zombies(int ***plateau);
 
 
 //Joueur
-#define NOMBRE_DE_JOUEUR 0
+#define NOMBRE_DE_JOUEUR 5
 #define JOUEUR1 1
 #define JOUEUR2 2
 #define JOUEUR3 3
@@ -50,9 +57,9 @@ void reabilitation_valeur_zombies(int ***plateau);
 #define JOUEUR5 5
 
 int case_valide_joueur(int i, int j, int **plateau);
-void position_initial_joueur(int ***monde);
 void position_joueur(int **monde, int joueur, int position[2]);
 void deplacement_joueur(int ***monde, int joueur, int position [2], int mouvement);
+int condition_vie_joueur(int ***monde, int joueur, int position_joueur[2]);
 
 
 //Deplacement
