@@ -6,10 +6,8 @@
 //  Copyright © 2020 Pierrick Delrieu. All rights reserved.
 //
 
-#include <stdio.h>
-#include "fonction.h"
-#include <stdlib.h>
-#include <time.h>
+#include "fonctions.h"
+
 
 
 void random_ajout_zombie(int ***monde)
@@ -69,10 +67,10 @@ int case_valide_zombie(int i, int j, int **plateau)
 
 void deplacement_zombies(int ***plateau)
 {
-    //1-droite; 2-gauche; 3-haut; 4-bas; 5-bouge pas
+    //1-droite; 2-gauche; 3-haut; 4-bas; 0-bouge pas
     
     int i,j;
-    int position;
+    int position = 0;
     
     for(i=0; i<HEIGHT; i++)
     {
@@ -163,6 +161,7 @@ void deplacement_zombies(int ***plateau)
         }
     }
 }
+
 
 void reabilitation_valeur_zombies(int ***plateau)
 {

@@ -6,9 +6,7 @@
 //  Copyright © 2020 Pierrick Delrieu. All rights reserved.
 //
 
-#include <stdio.h>
-#include "fonction.h"
-#include <stdlib.h>
+#include "fonctions.h"
 
 
 int ** creation_plateau_vide(int hauteur, int largeur)

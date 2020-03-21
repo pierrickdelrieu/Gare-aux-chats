@@ -10,7 +10,8 @@
 		EDB4D2202422B6AE00A46C04 /* main.c in Sources */ = {isa = PBXBuildFile; fileRef = EDB4D21F2422B6AE00A46C04 /* main.c */; };
 		EDB4D2292422B98800A46C04 /* plateau.c in Sources */ = {isa = PBXBuildFile; fileRef = EDB4D2282422B98800A46C04 /* plateau.c */; };
 		EDB4D22B2422C82A00A46C04 /* zombies.c in Sources */ = {isa = PBXBuildFile; fileRef = EDB4D22A2422C82A00A46C04 /* zombies.c */; };
-		EDB4D22D2422C85700A46C04 /* player.c in Sources */ = {isa = PBXBuildFile; fileRef = EDB4D22C2422C85700A46C04 /* player.c */; };
+		EDB4D22D2422C85700A46C04 /* joueur.c in Sources */ = {isa = PBXBuildFile; fileRef = EDB4D22C2422C85700A46C04 /* joueur.c */; };
+		EDCB20DF24267F1100CAD30C /* player.c in Sources */ = {isa = PBXBuildFile; fileRef = EDCB20DE24267F1100CAD30C /* player.c */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -29,11 +30,12 @@
 		EDB4D21C2422B6AE00A46C04 /* zombies */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = zombies; sourceTree = BUILT_PRODUCTS_DIR; };
 		EDB4D21F2422B6AE00A46C04 /* main.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = main.c; sourceTree = "<group>"; };
 		EDB4D2262422B70F00A46C04 /* Zombies.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = Zombies.pdf; sourceTree = "<group>"; };
-		EDB4D2272422B90B00A46C04 /* fonction.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = fonction.h; sourceTree = "<group>"; };
+		EDB4D2272422B90B00A46C04 /* fonctions.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = fonctions.h; sourceTree = "<group>"; };
 		EDB4D2282422B98800A46C04 /* plateau.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = plateau.c; sourceTree = "<group>"; };
 		EDB4D22A2422C82A00A46C04 /* zombies.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = zombies.c; sourceTree = "<group>"; };
-		EDB4D22C2422C85700A46C04 /* player.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = player.c; sourceTree = "<group>"; };
+		EDB4D22C2422C85700A46C04 /* joueur.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = joueur.c; sourceTree = "<group>"; };
 		EDCB20D72424205C00CAD30C /* Note */ = {isa = PBXFileReference; lastKnownFileType = text; path = Note; sourceTree = "<group>"; };
+		EDCB20DE24267F1100CAD30C /* player.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = player.c; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,7 +54,7 @@
 			children = (
 				EDCB20D72424205C00CAD30C /* Note */,
 				EDB4D2262422B70F00A46C04 /* Zombies.pdf */,
-				EDB4D21E2422B6AE00A46C04 /* main */,
+				EDB4D21E2422B6AE00A46C04 /* source */,
 				EDB4D21D2422B6AE00A46C04 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -65,16 +67,17 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		EDB4D21E2422B6AE00A46C04 /* main */ = {
+		EDB4D21E2422B6AE00A46C04 /* source */ = {
 			isa = PBXGroup;
 			children = (
 				EDB4D21F2422B6AE00A46C04 /* main.c */,
-				EDB4D2272422B90B00A46C04 /* fonction.h */,
-				EDB4D22C2422C85700A46C04 /* player.c */,
+				EDB4D2272422B90B00A46C04 /* fonctions.h */,
+				EDB4D22C2422C85700A46C04 /* joueur.c */,
 				EDB4D2282422B98800A46C04 /* plateau.c */,
 				EDB4D22A2422C82A00A46C04 /* zombies.c */,
+				EDCB20DE24267F1100CAD30C /* player.c */,
 			);
-			path = main;
+			path = source;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -135,8 +138,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				EDB4D2292422B98800A46C04 /* plateau.c in Sources */,
-				EDB4D22D2422C85700A46C04 /* player.c in Sources */,
+				EDB4D22D2422C85700A46C04 /* joueur.c in Sources */,
 				EDB4D22B2422C82A00A46C04 /* zombies.c in Sources */,
+				EDCB20DF24267F1100CAD30C /* player.c in Sources */,
 				EDB4D2202422B6AE00A46C04 /* main.c in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
