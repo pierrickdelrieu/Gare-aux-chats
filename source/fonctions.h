@@ -1,6 +1,6 @@
 //
 //  fonctions.h
-//  zombies
+//  gare_aux_chats
 //
 //  Created by Pierrick Delrieu on 18/03/2020.
 //  Copyright © 2020 Pierrick Delrieu. All rights reserved.
@@ -10,12 +10,12 @@
 #define fonctions_h
 
 //PLAYER
-void position_initial_joueur(int ***monde, int position_joueur1[2], int position_joueur2[2],int position_joueur3[2],int position_joueur4[2],int position_joueur5[2]);
-int joueur1(int **monde);
-int joueur2(int **monde);
-int joueur3(int **monde);
-int joueur4(int **monde);
-int joueur5(int **monde);
+void position_initial_souris(int ***monde, int position_joueur1[2], int position_joueur2[2],int position_joueur3[2],int position_joueur4[2],int position_joueur5[2]);
+int souris1(int **monde);
+int souris2(int **monde);
+int souris3(int **monde);
+int souris4(int **monde);
+int souris5(int **monde);
 
 
 
@@ -25,41 +25,41 @@ int joueur5(int **monde);
 #include <time.h>
 #include <unistd.h> //pour le sleep
 
-//Plateau
+//MONDE
 #define HEIGHT 15 //hauteur (ligne)
-#define WIDHT 15 //largeur (colonne)
+#define WIDTH 15 //largeur (colonne)
 
 #define CASE_VIDE 0
-#define ZOMBIE 6
-int ** creation_plateau_vide(int hauteur, int largeur);
-void affichage_plateau(int **plateau);
+#define CHAT 6
+int ** creation_monde_vide(int hauteur, int largeur);
+void affichage_monde(int **monde);
 void supr_console(void);
-void desalocation_plateau(int **plateau);
+void desalocation_monde(int **monde);
 int condition_arret_partie(int **monde);
 
 
 
 
-//Zombies
-#define NX_ZOMBIE 7
-void random_ajout_zombie(int ***monde);
-int case_valide_zombie(int i, int j, int **plateau);
-void deplacement_zombies(int ***plateau);
-void reabilitation_valeur_zombies(int ***plateau);
+//CHATS
+#define NX_CHAT 7
+void random_ajout_chat(int ***monde);
+int case_valide_chat(int i, int j, int **monde);
+void deplacement_chat(int ***monde);
+void reabilitation_valeur_chat(int ***monde);
 
 
-//Joueur
-#define NOMBRE_DE_JOUEUR 5
-#define JOUEUR1 1
-#define JOUEUR2 2
-#define JOUEUR3 3
-#define JOUEUR4 4
-#define JOUEUR5 5
+//SOURIS
+#define NOMBRE_DE_SOURIS 5
+#define SOURIS1 1
+#define SOURIS2 2
+#define SOURIS3 3
+#define SOURIS4 4
+#define SOURIS5 5
 
-int case_valide_joueur(int i, int j, int **plateau);
-void position_joueur(int **monde, int joueur, int position[2]);
-void deplacement_joueur(int ***monde, int joueur, int position [2], int mouvement);
-int condition_vie_joueur(int ***monde, int joueur, int position_joueur[2]);
+int case_valide_souris(int i, int j, int **monde);
+void position_souris(int **monde, int souris, int position[2]);
+void deplacement_souris(int ***monde, int souris, int position [2], int mouvement);
+int condition_vie_souris(int ***monde, int souris, int position_joueur[2]);
 
 
 //Deplacement

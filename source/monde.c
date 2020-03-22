@@ -1,6 +1,6 @@
 //
-//  plateau.c
-//  zombies
+//  monde.c
+//  gare_aux_chats
 //
 //  Created by Pierrick Delrieu on 18/03/2020.
 //  Copyright © 2020 Pierrick Delrieu. All rights reserved.
@@ -9,41 +9,41 @@
 #include "fonctions.h"
 
 
-int ** creation_plateau_vide(int hauteur, int largeur)
+int ** creation_monde_vide(int hauteur, int largeur)
 {
-    int **plateau = NULL;
+    int **monde = NULL;
     int i;
     
     //Allocation espace dynamique
-    plateau = (int **) malloc(hauteur * sizeof(int *));
+    monde = (int **) malloc(hauteur * sizeof(int *));
     
     for(i=0; i<hauteur; i++)
     {
-        plateau[i] = (int *) calloc(largeur, sizeof(int));
+        monde[i] = (int *) calloc(largeur, sizeof(int));
     }
 
-    return(plateau);
+    return(monde);
 }
 
-void affichage_plateau(int **plateau)
+void affichage_monde(int **monde)
 {
     int i,j;
     
     for(i=0; i<HEIGHT; i++)
     {
-        for(j=0; j<WIDHT; j++)
+        for(j=0; j<WIDTH; j++)
         {
-            if(plateau[i][j] == ZOMBIE)
+            if(monde[i][j] == CHAT)
             {
-                printf("Z ");
+                printf("C ");
             }
-            else if(plateau[i][j] == CASE_VIDE)
+            else if(monde[i][j] == CASE_VIDE)
             {
                 printf("  ");
             }
             else
             {
-                printf("%d ",plateau[i][j]);
+                printf("%d ",monde[i][j]);
             }
         }
         printf("\n");
@@ -51,15 +51,15 @@ void affichage_plateau(int **plateau)
 }
 
 
-void desalocation_plateau(int **plateau)
+void desalocation_monde(int **monde)
 {
     int i;
     for(i=0; i<HEIGHT; i++)
     {
-        free(plateau[i]);
+        free(monde[i]);
     }
     
-    free(plateau);
+    free(monde);
 }
 
 void supr_console()
@@ -74,9 +74,9 @@ int condition_arret_partie(int **monde)
     
     for(i=0; i<HEIGHT; i++)
     {
-        for(j=0; j<WIDHT; j++)
+        for(j=0; j<WIDTH; j++)
         {
-            if((monde[i][j] == JOUEUR1) || (monde[i][j] == JOUEUR2) || (monde[i][j] == JOUEUR3) || (monde[i][j] == JOUEUR4) || (monde[i][j] == JOUEUR5))
+            if((monde[i][j] == SOURIS1) || (monde[i][j] == SOURIS2) || (monde[i][j] == SOURIS3) || (monde[i][j] == SOURIS4) || (monde[i][j] == SOURIS5))
             {
                 retour = 1;
             }

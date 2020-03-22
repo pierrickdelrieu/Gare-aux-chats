@@ -8,10 +8,15 @@
 
 /* Begin PBXBuildFile section */
 		EDB4D2202422B6AE00A46C04 /* main.c in Sources */ = {isa = PBXBuildFile; fileRef = EDB4D21F2422B6AE00A46C04 /* main.c */; };
-		EDB4D2292422B98800A46C04 /* plateau.c in Sources */ = {isa = PBXBuildFile; fileRef = EDB4D2282422B98800A46C04 /* plateau.c */; };
-		EDB4D22B2422C82A00A46C04 /* zombies.c in Sources */ = {isa = PBXBuildFile; fileRef = EDB4D22A2422C82A00A46C04 /* zombies.c */; };
-		EDB4D22D2422C85700A46C04 /* joueur.c in Sources */ = {isa = PBXBuildFile; fileRef = EDB4D22C2422C85700A46C04 /* joueur.c */; };
-		EDCB20DF24267F1100CAD30C /* player.c in Sources */ = {isa = PBXBuildFile; fileRef = EDCB20DE24267F1100CAD30C /* player.c */; };
+		EDB4D2292422B98800A46C04 /* monde.c in Sources */ = {isa = PBXBuildFile; fileRef = EDB4D2282422B98800A46C04 /* monde.c */; };
+		EDB4D22B2422C82A00A46C04 /* chats.c in Sources */ = {isa = PBXBuildFile; fileRef = EDB4D22A2422C82A00A46C04 /* chats.c */; };
+		EDB4D22D2422C85700A46C04 /* souris.c in Sources */ = {isa = PBXBuildFile; fileRef = EDB4D22C2422C85700A46C04 /* souris.c */; };
+		EDCB20DF24267F1100CAD30C /* souris.c in Sources */ = {isa = PBXBuildFile; fileRef = EDCB20DE24267F1100CAD30C /* souris.c */; };
+		EDCB20F72427FB5400CAD30C /* souris1.c in Sources */ = {isa = PBXBuildFile; fileRef = EDCB20F62427FB5400CAD30C /* souris1.c */; };
+		EDCB20F92427FB7600CAD30C /* souris2.c in Sources */ = {isa = PBXBuildFile; fileRef = EDCB20F82427FB7600CAD30C /* souris2.c */; };
+		EDCB20FB2427FB8400CAD30C /* souris3.c in Sources */ = {isa = PBXBuildFile; fileRef = EDCB20FA2427FB8400CAD30C /* souris3.c */; };
+		EDCB20FD2427FB9200CAD30C /* souris4.c in Sources */ = {isa = PBXBuildFile; fileRef = EDCB20FC2427FB9200CAD30C /* souris4.c */; };
+		EDCB20FF2427FB9F00CAD30C /* souris5.c in Sources */ = {isa = PBXBuildFile; fileRef = EDCB20FE2427FB9F00CAD30C /* souris5.c */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -27,15 +32,19 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		EDB4D21C2422B6AE00A46C04 /* zombies */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = zombies; sourceTree = BUILT_PRODUCTS_DIR; };
+		EDB4D21C2422B6AE00A46C04 /* gare_aux_chats */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = gare_aux_chats; sourceTree = BUILT_PRODUCTS_DIR; };
 		EDB4D21F2422B6AE00A46C04 /* main.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = main.c; sourceTree = "<group>"; };
-		EDB4D2262422B70F00A46C04 /* Zombies.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = Zombies.pdf; sourceTree = "<group>"; };
 		EDB4D2272422B90B00A46C04 /* fonctions.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = fonctions.h; sourceTree = "<group>"; };
-		EDB4D2282422B98800A46C04 /* plateau.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = plateau.c; sourceTree = "<group>"; };
-		EDB4D22A2422C82A00A46C04 /* zombies.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = zombies.c; sourceTree = "<group>"; };
-		EDB4D22C2422C85700A46C04 /* joueur.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = joueur.c; sourceTree = "<group>"; };
+		EDB4D2282422B98800A46C04 /* monde.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = monde.c; sourceTree = "<group>"; };
+		EDB4D22A2422C82A00A46C04 /* chats.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = chats.c; sourceTree = "<group>"; };
+		EDB4D22C2422C85700A46C04 /* souris.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = souris.c; sourceTree = "<group>"; };
 		EDCB20D72424205C00CAD30C /* Note */ = {isa = PBXFileReference; lastKnownFileType = text; path = Note; sourceTree = "<group>"; };
-		EDCB20DE24267F1100CAD30C /* player.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = player.c; sourceTree = "<group>"; };
+		EDCB20DE24267F1100CAD30C /* souris.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = souris.c; sourceTree = "<group>"; };
+		EDCB20F62427FB5400CAD30C /* souris1.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = souris1.c; sourceTree = "<group>"; };
+		EDCB20F82427FB7600CAD30C /* souris2.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = souris2.c; sourceTree = "<group>"; };
+		EDCB20FA2427FB8400CAD30C /* souris3.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = souris3.c; sourceTree = "<group>"; };
+		EDCB20FC2427FB9200CAD30C /* souris4.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = souris4.c; sourceTree = "<group>"; };
+		EDCB20FE2427FB9F00CAD30C /* souris5.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = souris5.c; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,7 +62,7 @@
 			isa = PBXGroup;
 			children = (
 				EDCB20D72424205C00CAD30C /* Note */,
-				EDB4D2262422B70F00A46C04 /* Zombies.pdf */,
+				EDCB20F52427FAFF00CAD30C /* souris */,
 				EDB4D21E2422B6AE00A46C04 /* source */,
 				EDB4D21D2422B6AE00A46C04 /* Products */,
 			);
@@ -62,7 +71,7 @@
 		EDB4D21D2422B6AE00A46C04 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				EDB4D21C2422B6AE00A46C04 /* zombies */,
+				EDB4D21C2422B6AE00A46C04 /* gare_aux_chats */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -72,20 +81,32 @@
 			children = (
 				EDB4D21F2422B6AE00A46C04 /* main.c */,
 				EDB4D2272422B90B00A46C04 /* fonctions.h */,
-				EDB4D22C2422C85700A46C04 /* joueur.c */,
-				EDB4D2282422B98800A46C04 /* plateau.c */,
-				EDB4D22A2422C82A00A46C04 /* zombies.c */,
-				EDCB20DE24267F1100CAD30C /* player.c */,
+				EDB4D22C2422C85700A46C04 /* souris.c */,
+				EDB4D2282422B98800A46C04 /* monde.c */,
+				EDB4D22A2422C82A00A46C04 /* chats.c */,
 			);
 			path = source;
+			sourceTree = "<group>";
+		};
+		EDCB20F52427FAFF00CAD30C /* souris */ = {
+			isa = PBXGroup;
+			children = (
+				EDCB20DE24267F1100CAD30C /* souris.c */,
+				EDCB20F62427FB5400CAD30C /* souris1.c */,
+				EDCB20F82427FB7600CAD30C /* souris2.c */,
+				EDCB20FA2427FB8400CAD30C /* souris3.c */,
+				EDCB20FC2427FB9200CAD30C /* souris4.c */,
+				EDCB20FE2427FB9F00CAD30C /* souris5.c */,
+			);
+			path = souris;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		EDB4D21B2422B6AE00A46C04 /* zombies */ = {
+		EDB4D21B2422B6AE00A46C04 /* gare_aux_chats */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = EDB4D2232422B6AE00A46C04 /* Build configuration list for PBXNativeTarget "zombies" */;
+			buildConfigurationList = EDB4D2232422B6AE00A46C04 /* Build configuration list for PBXNativeTarget "gare_aux_chats" */;
 			buildPhases = (
 				EDB4D2182422B6AE00A46C04 /* Sources */,
 				EDB4D2192422B6AE00A46C04 /* Frameworks */,
@@ -95,9 +116,9 @@
 			);
 			dependencies = (
 			);
-			name = zombies;
+			name = gare_aux_chats;
 			productName = zombies;
-			productReference = EDB4D21C2422B6AE00A46C04 /* zombies */;
+			productReference = EDB4D21C2422B6AE00A46C04 /* gare_aux_chats */;
 			productType = "com.apple.product-type.tool";
 		};
 /* End PBXNativeTarget section */
@@ -114,7 +135,7 @@
 					};
 				};
 			};
-			buildConfigurationList = EDB4D2172422B6AD00A46C04 /* Build configuration list for PBXProject "zombies" */;
+			buildConfigurationList = EDB4D2172422B6AD00A46C04 /* Build configuration list for PBXProject "gare_aux_chats" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -127,7 +148,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				EDB4D21B2422B6AE00A46C04 /* zombies */,
+				EDB4D21B2422B6AE00A46C04 /* gare_aux_chats */,
 			);
 		};
 /* End PBXProject section */
@@ -137,11 +158,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EDB4D2292422B98800A46C04 /* plateau.c in Sources */,
-				EDB4D22D2422C85700A46C04 /* joueur.c in Sources */,
-				EDB4D22B2422C82A00A46C04 /* zombies.c in Sources */,
-				EDCB20DF24267F1100CAD30C /* player.c in Sources */,
+				EDB4D2292422B98800A46C04 /* monde.c in Sources */,
+				EDCB20FD2427FB9200CAD30C /* souris4.c in Sources */,
+				EDB4D22D2422C85700A46C04 /* souris.c in Sources */,
+				EDCB20FB2427FB8400CAD30C /* souris3.c in Sources */,
+				EDB4D22B2422C82A00A46C04 /* chats.c in Sources */,
+				EDCB20DF24267F1100CAD30C /* souris.c in Sources */,
+				EDCB20FF2427FB9F00CAD30C /* souris5.c in Sources */,
+				EDCB20F72427FB5400CAD30C /* souris1.c in Sources */,
 				EDB4D2202422B6AE00A46C04 /* main.c in Sources */,
+				EDCB20F92427FB7600CAD30C /* souris2.c in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -276,7 +302,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		EDB4D2172422B6AD00A46C04 /* Build configuration list for PBXProject "zombies" */ = {
+		EDB4D2172422B6AD00A46C04 /* Build configuration list for PBXProject "gare_aux_chats" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				EDB4D2212422B6AE00A46C04 /* Debug */,
@@ -285,7 +311,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		EDB4D2232422B6AE00A46C04 /* Build configuration list for PBXNativeTarget "zombies" */ = {
+		EDB4D2232422B6AE00A46C04 /* Build configuration list for PBXNativeTarget "gare_aux_chats" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				EDB4D2242422B6AE00A46C04 /* Debug */,

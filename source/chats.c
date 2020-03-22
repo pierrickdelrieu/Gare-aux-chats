@@ -1,6 +1,6 @@
 //
-//  zombies.c
-//  zombies
+//  chats.c
+//  gare_aux_chats
 //
 //  Created by Pierrick Delrieu on 18/03/2020.
 //  Copyright © 2020 Pierrick Delrieu. All rights reserved.
@@ -10,7 +10,7 @@
 
 
 
-void random_ajout_zombie(int ***monde)
+void random_ajout_chat(int ***monde)
 {
     int haut_droite;
     int bas_droite;
@@ -24,37 +24,37 @@ void random_ajout_zombie(int ***monde)
     
     if(haut_droite == 1)
     {
-        *(*(*monde) + (WIDHT-1)) = ZOMBIE;
+        *(*(*monde) + (WIDTH-1)) = CHAT;
     }
     
     if(bas_droite == 1)
     {
-        *(*(*monde + (HEIGHT-1)) + (WIDHT-1)) = ZOMBIE;
+        *(*(*monde + (HEIGHT-1)) + (WIDTH-1)) = CHAT;
     }
     
     if(haut_gauche == 1)
     {
-        *(*(*monde)) = ZOMBIE;
+        *(*(*monde)) = CHAT;
     }
     
     if(bas_gauche == 1)
     {
-        *(*(*monde + (HEIGHT-1))) = ZOMBIE;
+        *(*(*monde + (HEIGHT-1))) = CHAT;
     }
 }
 
-int case_valide_zombie(int i, int j, int **plateau)
+int case_valide_chat(int i, int j, int **monde)
 {
     // 1 si plateau[i][j] valide et 0 sinon
 
     int valide = 0;
 
-    if((i<HEIGHT) && (j<WIDHT) && (i>0) && (j>0))
+    if((i<HEIGHT) && (j<WIDTH) && (i>=0) && (j>=0))
     {
         valide = 1;
     }
 
-    if((valide == 1) && (plateau[i][j] != ZOMBIE))
+    if((valide == 1) && (monde[i][j] != CHAT))
     {
         return 1;
     }
@@ -65,7 +65,7 @@ int case_valide_zombie(int i, int j, int **plateau)
 }
 
 
-void deplacement_zombies(int ***plateau)
+void deplacement_chat(int ***monde)
 {
     //1-droite; 2-gauche; 3-haut; 4-bas; 5-bouge pas
     
@@ -74,7 +74,7 @@ void deplacement_zombies(int ***plateau)
     
     for(i=0; i<HEIGHT; i++)
     {
-        for(j=0; j<WIDHT; j++)
+        for(j=0; j<WIDTH; j++)
         {
             if(i == 0)
             {
@@ -94,7 +94,7 @@ void deplacement_zombies(int ***plateau)
                     position = 1 + (rand() % 4);
                 }while(position == 1);
             }
-            if(j == WIDHT-1)
+            if(j == WIDTH-1)
             {
                 do{
                     position = 1 + (rand() % 4);
@@ -107,7 +107,7 @@ void deplacement_zombies(int ***plateau)
                     position = 1 + (rand() % 4);
                 }
             }
-            if((i == 0) && (j == WIDHT-1))
+            if((i == 0) && (j == WIDTH-1))
             {
                 while((position == 1) || (position == 3))
                 {
@@ -121,7 +121,7 @@ void deplacement_zombies(int ***plateau)
                     position = 1 + (rand() % 4);
                 }
             }
-            if((i == HEIGHT-1) && (j == WIDHT-1))
+            if((i == HEIGHT-1) && (j == WIDTH-1))
             {
                 while((position == 1) || (position == 4))
                 {
@@ -129,33 +129,33 @@ void deplacement_zombies(int ***plateau)
                 }
             }
             
-            if((i != 0) && (i != HEIGHT-1) && (j != 0) && (j != WIDHT-1))
+            if((i != 0) && (i != HEIGHT-1) && (j != 0) && (j != WIDTH-1))
             {
                 position = 1 + (rand() % 4);
             }
             
             
-            if(*(*(*plateau + i)+j) == ZOMBIE)
+            if(*(*(*monde + i)+j) == CHAT)
             {
-                if((case_valide_zombie(i, j+1, *plateau) == 1) && (position == 1)) //droite
+                if((case_valide_chat(i, j+1, *monde) == 1) && (position == 1)) //droite
                 {
-                    *(*(*plateau + i)+j) = CASE_VIDE;
-                    *(*(*plateau + i)+(j+1)) = NX_ZOMBIE;
+                    *(*(*monde + i)+j) = CASE_VIDE;
+                    *(*(*monde + i)+(j+1)) = NX_CHAT;
                 }
-                else if((case_valide_zombie(i, j-1, *plateau) == 1) && (position == 2)) //gauche
+                else if((case_valide_chat(i, j-1, *monde) == 1) && (position == 2)) //gauche
                 {
-                    *(*(*plateau + i)+j) = CASE_VIDE;
-                    *(*(*plateau + i)+(j-1)) = NX_ZOMBIE;
+                    *(*(*monde + i)+j) = CASE_VIDE;
+                    *(*(*monde + i)+(j-1)) = NX_CHAT;
                 }
-                else if((case_valide_zombie(i-1, j, *plateau) == 1) && (position == 3)) //haut
+                else if((case_valide_chat(i-1, j, *monde) == 1) && (position == 3)) //haut
                 {
-                    *(*(*plateau + i)+j) = CASE_VIDE;
-                    *(*(*plateau + (i-1))+j) = NX_ZOMBIE;
+                    *(*(*monde + i)+j) = CASE_VIDE;
+                    *(*(*monde + (i-1))+j) = NX_CHAT;
                 }
-                else if((case_valide_zombie(i+1, j, *plateau) == 1) && (position == 4)) //bas
+                else if((case_valide_chat(i+1, j, *monde) == 1) && (position == 4)) //bas
                 {
-                    *(*(*plateau + i)+j) = CASE_VIDE;
-                    *(*(*plateau + (i+1))+j) = NX_ZOMBIE;
+                    *(*(*monde + i)+j) = CASE_VIDE;
+                    *(*(*monde + (i+1))+j) = NX_CHAT;
                 }
             }
         }
@@ -163,17 +163,17 @@ void deplacement_zombies(int ***plateau)
 }
 
 
-void reabilitation_valeur_zombies(int ***plateau)
+void reabilitation_valeur_chat(int ***monde)
 {
     int i,j;
     
     for(i=0; i<HEIGHT; i++)
     {
-        for(j=0; j<WIDHT; j++)
+        for(j=0; j<WIDTH; j++)
         {
-            if(*(*(*plateau + i)+j) == NX_ZOMBIE)
+            if(*(*(*monde + i)+j) == NX_CHAT)
             {
-                *(*(*plateau + i)+j) = ZOMBIE;
+                *(*(*monde + i)+j) = CHAT;
             }
         }
     }

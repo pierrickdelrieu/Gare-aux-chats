@@ -1,6 +1,6 @@
 //
 //  main.c
-//  zombies
+//  gare_aux_chats
 //
 //  Created by Pierrick Delrieu on 18/03/2020.
 //  Copyright © 2020 Pierrick Delrieu. All rights reserved.
@@ -13,81 +13,73 @@
 
 int main()
 {
-    int **plateau = NULL;
+    int **monde = NULL;
     int tour = 0;
     srand((unsigned)time(NULL)); //initialisation du temps
 
     
-    plateau = creation_plateau_vide(HEIGHT, WIDHT);
+    monde = creation_monde_vide(HEIGHT, WIDTH);
     
-    int position_joueur1[2];
-    int position_joueur2[2];
-    int position_joueur3[2];
-    int position_joueur4[2];
-    int position_joueur5[2];
+    int position_souris1[2];
+    int position_souris2[2];
+    int position_souris3[2];
+    int position_souris4[2];
+    int position_souris5[2];
     
-    position_initial_joueur(&plateau,position_joueur1,position_joueur2,position_joueur3,position_joueur4,position_joueur5);
+    position_initial_souris(&monde,position_souris1,position_souris2,position_souris3,position_souris4,position_souris5);
     
     
     //BOUCLE DE JEU
-    while(condition_arret_partie(plateau) == 1)
+    while(condition_arret_partie(monde) == 1)
     {
-    
-        //verifier que le joueur n'est pas mort
-        
         
         //JOUEUR1
-        if(condition_vie_joueur(&plateau, JOUEUR1, position_joueur1) == 1)
+        if(condition_vie_souris(&monde, SOURIS1, position_souris1) == 1)
         {
-            position_joueur(plateau, JOUEUR1, position_joueur1);
-            deplacement_joueur(&plateau, JOUEUR1, position_joueur1, joueur1(plateau));
-            position_joueur(plateau, JOUEUR1, position_joueur1);
+            deplacement_souris(&monde, SOURIS1, position_souris1, souris1(monde));
+            position_souris(monde, SOURIS1, position_souris1);
         }
                   
         //JOUEUR2
-        if(condition_vie_joueur(&plateau, JOUEUR2, position_joueur2) == 1)
+        if(condition_vie_souris(&monde, SOURIS2, position_souris2) == 1)
         {
-            position_joueur(plateau, JOUEUR2, position_joueur2);
-            deplacement_joueur(&plateau, JOUEUR2, position_joueur2, joueur2(plateau));
-            position_joueur(plateau, JOUEUR2, position_joueur2);
+            deplacement_souris(&monde, SOURIS2, position_souris2, souris2(monde));
+            position_souris(monde, SOURIS2, position_souris2);
         }
         
         //JOUEUR3
-        if(condition_vie_joueur(&plateau, JOUEUR3, position_joueur3) == 1)
+        if(condition_vie_souris(&monde, SOURIS3, position_souris3) == 1)
         {
-            position_joueur(plateau, JOUEUR3, position_joueur3);
-            deplacement_joueur(&plateau, JOUEUR3, position_joueur3, joueur3(plateau));
-            position_joueur(plateau, JOUEUR3, position_joueur3);
+            deplacement_souris(&monde, SOURIS3, position_souris3, souris3(monde));
+            position_souris(monde, SOURIS3, position_souris3);
         }
         
         //JOUEUR4
-        if(condition_vie_joueur(&plateau, JOUEUR4, position_joueur4) == 1)
+        if(condition_vie_souris(&monde, SOURIS4, position_souris4) == 1)
         {
-            position_joueur(plateau, JOUEUR4, position_joueur4);
-            deplacement_joueur(&plateau, JOUEUR4, position_joueur4, joueur4(plateau));
-            position_joueur(plateau, JOUEUR4, position_joueur4);
+            deplacement_souris(&monde, SOURIS4, position_souris4, souris4(monde));
+            position_souris(monde, SOURIS4, position_souris4);
         }
         
         //JOUEUR5
-        if(condition_vie_joueur(&plateau, JOUEUR5, position_joueur5) == 1)
+        if(condition_vie_souris(&monde, SOURIS5, position_souris5) == 1)
         {
-            position_joueur(plateau, JOUEUR5, position_joueur5);
-            deplacement_joueur(&plateau, JOUEUR5, position_joueur5, joueur5(plateau));
-            position_joueur(plateau, JOUEUR5, position_joueur5);
+            deplacement_souris(&monde, SOURIS5, position_souris5, souris5(monde));
+            position_souris(monde, SOURIS5, position_souris5);
         }
         
         //ZOMBIES
-        deplacement_zombies(&plateau);
-        random_ajout_zombie(&plateau);
-        reabilitation_valeur_zombies(&plateau);
+        deplacement_chat(&monde);
+        random_ajout_chat(&monde);
+        reabilitation_valeur_chat(&monde);
         
-        affichage_plateau(plateau);
+        affichage_monde(monde);
         tour ++;
         sleep(1); //met le programme en pause pendant 1 sec
         supr_console();
     }
     
-    desalocation_plateau(plateau);
+    desalocation_monde(monde);
     return 0;
 }
 

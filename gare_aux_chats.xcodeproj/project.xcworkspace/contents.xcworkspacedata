@@ -2,6 +2,6 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "self:zombies.xcodeproj">
+      location = "self:/Users/pierrickdelrieu/Desktop/C/zombies/gare_aux_chats.xcodeproj">
    </FileRef>
 </Workspace>
