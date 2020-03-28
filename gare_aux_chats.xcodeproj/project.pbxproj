@@ -45,6 +45,7 @@
 		EDCB20FA2427FB8400CAD30C /* souris3.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = souris3.c; sourceTree = "<group>"; };
 		EDCB20FC2427FB9200CAD30C /* souris4.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = souris4.c; sourceTree = "<group>"; };
 		EDCB20FE2427FB9F00CAD30C /* souris5.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = souris5.c; sourceTree = "<group>"; };
+		EDCB212D242A616400CAD30C /* philippe_mourey.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = philippe_mourey.c; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,6 +98,7 @@
 				EDCB20FA2427FB8400CAD30C /* souris3.c */,
 				EDCB20FC2427FB9200CAD30C /* souris4.c */,
 				EDCB20FE2427FB9F00CAD30C /* souris5.c */,
+				EDCB212D242A616400CAD30C /* philippe_mourey.c */,
 			);
 			path = souris;
 			sourceTree = "<group>";

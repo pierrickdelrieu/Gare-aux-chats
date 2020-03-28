@@ -8,23 +8,40 @@
 
 #include "fonctions.h"
 
+//position initiale : [WIDHT/2, HEIGHT/2]
+
 int souris1(int **monde)
 {
-    int mouvement = 1 + (rand() % 4);
+    int i, j;
+    int position[2];
     
-    if(mouvement == 1)
+    //Recupération de la position de la souris
+    for(i=0; i<HEIGHT; i++)
+    {
+        for(j=0; j<WIDTH; j++)
+        {
+            if(monde[i][j] == SOURIS1)
+            {
+                position[0] = i;
+                position[1] = j;
+            }
+        }
+    }
+    
+    //Détection des chats autours
+    if((monde[position[0]][position[1]-1] == CHAT) && (case_valide_souris(position[0], position[1]-1, monde) == 1))
     {
         return RIGHT;
     }
-    else if(mouvement == 2)
+    else if((monde[position[0]][position[1]+1] == CHAT) && (case_valide_souris(position[0], position[1]+1, monde) == 1))
     {
         return LEFT;
     }
-    else if(mouvement == 3)
+    else if((monde[position[0]+1][position[1]] == CHAT) && (case_valide_souris(position[0]+1, position[1], monde) == 1))
     {
         return UP;
     }
-    else if(mouvement == 4)
+    else if((monde[position[0]-1][position[1]] == CHAT) && (case_valide_souris(position[0]-1, position[1], monde) == 1))
     {
         return DOWN;
     }

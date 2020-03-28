@@ -2,8 +2,8 @@
 //  souris3.c
 //  gare_aux_chats
 //
-//  Created by Pierrick Delrieu on 22/03/2020.
-//  Copyright © 2020 Pierrick Delrieu. All rights reserved.
+//  Created by Philippe Mourey on 26/03/2020.
+//  Copyright © 2020 Philippe Mourey. All rights reserved.
 //
 
 #include "fonctions.h"
@@ -412,4 +412,3 @@ int souris3(int **monde)
 
     return mouvement;
 }
-

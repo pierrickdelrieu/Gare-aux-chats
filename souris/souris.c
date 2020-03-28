@@ -21,8 +21,8 @@ Si dans la fonction le joueur modifie le monde, la souris est automatiquement di
 
 void position_initial_souris(int ***monde, int position_joueur1[2], int position_joueur2[2],int position_joueur3[2],int position_joueur4[2],int position_joueur5[2])
 {
-    position_joueur1[0] = 14;
-    position_joueur1[1] = 2;
+    position_joueur1[0] = WIDTH/2;
+    position_joueur1[1] = HEIGHT/2;
     
     position_joueur2[0] = 2;
     position_joueur2[1] = 3;
